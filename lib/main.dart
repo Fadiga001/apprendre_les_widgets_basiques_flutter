@@ -46,7 +46,13 @@ class MyHomePage extends StatelessWidget {
             child: Text("Salut les codeurs")
         ),
       ),
-      body: FlutterLogo(size: 450,),
+      body: FlutterLogo(
+        size: MediaQuery.of(context).size.width / 2,
+        style: FlutterLogoStyle.stacked,
+        textColor: Colors.blueAccent,
+        duration: const Duration(microseconds: 2000),
+        curve: Curves.bounceIn,
+      ),
       
     );
   }
