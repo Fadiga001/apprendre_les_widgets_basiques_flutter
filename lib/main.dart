@@ -34,21 +34,20 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
-        backgroundColor: Theme.of(context).colorScheme.onInverseSurface,
+        centerTitle: true,
+        leading: const Icon(Icons.home),
+        actions: [
+          Icon(Icons.person),
+          Icon(Icons.access_alarm)
+        ],
+        elevation: 8,
+        bottom: PreferredSize(
+            preferredSize: Size.fromHeight(24),
+            child: Text("Salut les codeurs")
+        ),
       ),
       body: FlutterLogo(size: 450,),
-      floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            
-          },
-          child: const Icon(Icons.send),
-      ),
-      drawer: const Drawer(),
-      endDrawer: const Drawer(),
-      bottomNavigationBar: BottomNavigationBar(items: const [
-        BottomNavigationBarItem(icon: Icon(Icons.person), label: ""),
-        BottomNavigationBarItem(icon: Icon(Icons.home), label: "")
-      ]),
+      
     );
   }
 
